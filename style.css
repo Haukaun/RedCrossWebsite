@@ -1,0 +1,193 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 10px;
+    font-family: sans-serif;
+}
+
+#header{
+    display: flex;
+    flex-direction: column;
+}
+
+.header-container{
+    display: flex;
+    padding: 32px 32px;
+    justify-content: space-between;
+    font-size: 24px;
+}
+
+
+.menubar {
+    background-image: linear-gradient(
+      rgba(226, 107, 107, 0.45), 
+      rgb(168, 98, 96)
+    ), url(images/førstehjelp.jpg);
+
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+    gap: 16px;
+    font-size: 2.5rem;
+}
+
+.signup-btn button{
+    background-color: #ec361e; /* Green */
+    border: none;
+    border-color: #ffffff;
+    border-style: solid;
+    border-radius: 1.5rem;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 4rem;
+}
+
+.signup-btn button:hover{
+    background-color: #8a2315;
+    
+}
+
+
+.brand-image img {
+    height: 50px;
+    width: auto;
+}
+
+.menubar-links ul{
+    margin: 0;
+    padding: 16px 16px;
+    display: flex;
+}
+
+.menubar-links li{
+    list-style-type: none;
+}
+
+.menubar-links li a{
+    text-decoration:  none;
+    color: white;
+    padding: 1rem;
+    display: block;
+}
+
+.menubar-links li a:hover{
+    color: rgb(214, 171, 169);
+}
+
+.toggle-button{
+    position: absolute;
+    top: 0.75rem;
+    right: 1.5rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3px;
+    width: 30px;
+    height: 30px;
+}
+
+.toggle-button .bar{
+    height: 10px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.card {
+    width: 250px;
+    height: 400px;
+    margin-top: 40px;
+    margin: 2rem;
+    border-color: rgb(221, 168, 168);
+    border-style: double;
+    border-width: 1px thin;
+    overflow: hidden;
+    box-shadow: 0 0 30px 3px;
+    font-size: 1.5rem;
+}
+
+.product-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 64px;
+    
+}
+
+.card-description{
+    padding: 16px;
+}
+
+
+
+
+
+
+@media (max-width: 500px){
+    .container-text{
+        font-size: 2rem;
+    }
+}
+
+
+
+
+@media (max-width: 600px){
+    .toggle-button{
+        display: flex;
+        margin: 4rem 2.5rem;
+    }
+
+    .menubar-links{
+        display: none;
+        width: 100%;
+    }
+
+    .menubar{
+        flex-direction: column;
+    }
+
+    .menubar-links ul{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .menubar-links li{
+        text-align: center;
+    }
+
+    .menubar-links li a{
+        padding: 1rem;
+    }
+
+    .menubar-links.active{
+        display: flex;
+    }
+
+    .menubar-links.close{
+        display: none;
+    }
+}
+
